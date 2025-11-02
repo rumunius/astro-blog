@@ -1,7 +1,7 @@
 ---
 title: thedamn：在CMD上使用thefuck
 description: '时效性文章'
-publishDate: 2021-05-05 12
+publishDate: 2021-05-05 12:51
 tags:
   - 技术
   - 软件
