@@ -30,9 +30,7 @@ const headings = [
       loading='lazy'
     />
   </p>
-  <p>
-    如果你认为我的工作很有用或有趣，您可以捐赠以支持我的工作，或联系我讨论项目。
-  </p>
+  <p>如果你认为我的工作很有用或有趣，您可以捐赠以支持我的工作，或联系我讨论项目。</p>
   <Button title='赞赏我的工作' class='w-fit' href='#sponsorship'>
     <Icon class='size-5' name='receive-money' slot='before' />
   </Button>
@@ -41,71 +39,53 @@ const headings = [
   <ProjectSection
     projects={[
       {
-        name: '占位符1',
-        description:
-          'XXX',
-        links: [
-          { type: 'github', href: 'about:blank' },
-          {
-            type: 'release',
-            href: 'about:blank'
-          }
-        ]
+        name: '五子棋对战平台',
+        description: '2025信通杯作品',
+        links: []
+      },
+      {
+        name: '信号识别与分离装置',
+        description: '2025盟升杯作品',
+        links: []
       }
     ]}
   />
   <Collapse title='一些以前的项目'>
     <ProjectSection
       projects={[
-      {
-        name: '占位符2',
-        description:
-          'XXX',
-        links: [
-          { type: 'github', href: 'about:blank' },
-          {
-            type: 'release',
-            href: 'about:blank'
-          }
-        ]
-      }
-    ]}
+        {
+          name: '用Arduino在LCD12864上播放《Badapple!!》',
+          description: '有屏幕的地方就有……',
+          links: [{ type: 'github', href: 'https://github.com/rumunius/arduinoBadapple' }]
+        },
+        {
+          name: 'Arduino 2048游戏',
+          description: '基于Arduino nano在LCD12864上实现2048小游戏',
+          links: [{ type: 'github', href: 'https://github.com/rumunius/arduino2048' }]
+        }
+      ]}
     />
   </Collapse>
 
   <h2 id='software'>软件</h2>
-  <ProjectSection
+  <!-- <ProjectSection
     projects={[
       {
-        name: '占位符1',
-        description:
-          'XXX',
-        links: [
-          { type: 'github', href: 'about:blank' },
-          {
-            type: 'release',
-            href: 'about:blank'
-          }
-        ]
+        name: 'UESTC安全',
+        description: '技术栈：python、tkinter',
+        links: []
       }
     ]}
-  />
+  /> -->
   <Collapse title='一些以前的项目'>
     <ProjectSection
       projects={[
-      {
-        name: '占位符2',
-        description:
-          'XXX',
-        links: [
-          { type: 'github', href: 'about:blank' },
-          {
-            type: 'release',
-            href: 'about:blank'
-          }
-        ]
-      }
-    ]}
+        {
+          name: '编程猫小说下载器',
+          description: '技术栈：python、tkinter',
+          links: []
+        }
+      ]}
     />
   </Collapse>
 
@@ -115,28 +95,14 @@ const headings = [
     projects={[
       {
         name: '占位符',
-        description:
-          'XXX',
-        links: [
-          { type: 'github', href: 'about:blank' },
-          {
-            type: 'release',
-            href: 'about:blank'
-          }
-        ]
+        description: 'XXX',
+        links: []
       },
       {
         name: '占位符',
-        description:
-          'XXX',
-        links: [
-          { type: 'github', href: 'about:blank' },
-          {
-            type: 'release',
-            href: 'about:blank'
-          }
-        ]
-      },
+        description: 'XXX',
+        links: []
+      }
     ]}
   />
 
@@ -145,23 +111,14 @@ const headings = [
     projects={[
       {
         name: '占位符',
-        description:
-          'XXX',
-        links: [
-          { type: 'github', href: 'about:blank' },
-          {
-            type: 'release',
-            href: 'about:blank'
-          }
-        ]
+        description: 'XXX',
+        links: []
       }
     ]}
   />
 
   <h2 id='gpg-signature'>GPG 签名</h2>
-  <p>
-    暂无
-  </p>
+  <p>暂无</p>
   <!-- <Button href='https://keys.openpgp.org/search?q=114514' title='Checkout my key' target='_blank'>
     <KeyIcon class='size-5' slot='before' />
   </Button> -->

@@ -1,10 +1,11 @@
 ---
 title: 为你的右键菜单添加“查看MD5”（不只是md5）功能
 description: '通过注册表添加一个按钮'
-publishDate: 2025-11-02 12:58
+publishDate: 2025-07-13 19:12
 tags:
   - 技术
   - Windows
+  - 软件
 ---
 
 # 效果
