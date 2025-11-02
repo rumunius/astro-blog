@@ -4,7 +4,7 @@ import { Icon } from 'astro-pure/user'
 
 interface SubstatsItem {
   platform: string
-  icon: (typeof socialLinks)[number]
+  icon?: (typeof socialLinks)[number]
   color?: string
   link?: string
   text: string
