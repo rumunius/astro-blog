@@ -2,7 +2,7 @@
 import { prod } from 'astro-pure/server'
 import type { SiteMeta } from 'astro-pure/types'
 import config from '@/site-config'
-
+import Analytics from '@vercel/analytics/astro';
 type Props = SiteMeta
 
 const { articleDate, description, ogImage, title } = Astro.props
@@ -85,7 +85,7 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 
 {/* Styles */}
 <link rel='stylesheet' href='/styles/global.css' />
-
+<Analytics />
 {
   /* User script*/
   prod && (
