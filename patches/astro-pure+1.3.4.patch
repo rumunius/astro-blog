@@ -47,7 +47,7 @@ index 2609983..3e78836 100644
 -  // this ignores/filters out h1 element(s)
 -  const bodyHeadings = [...headings.filter(({ depth }) => depth > 1)]
 +  // include all headings including h1 element(s)
-+  const bodyHeadings = [...headings.filter(({ depth }) => depth > 0 && depth < 5)]
++  const bodyHeadings = [...headings.filter(({ depth }) => depth > 0)]
    const toc: TocItem[] = []
  
 +  // Find the minimum depth to use as top level
