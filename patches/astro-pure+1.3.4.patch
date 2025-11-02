@@ -1,5 +1,5 @@
 diff --git a/node_modules/astro-pure/components/pages/TOC.astro b/node_modules/astro-pure/components/pages/TOC.astro
-index 421842d..da62b92 100644
+index 421842d..3ed8b27 100644
 --- a/node_modules/astro-pure/components/pages/TOC.astro
 +++ b/node_modules/astro-pure/components/pages/TOC.astro
 @@ -48,7 +48,7 @@ const toc = generateToc(headings)
@@ -7,7 +7,7 @@ index 421842d..da62b92 100644
        // Initialize the headings and tocLinks
        this.headings = Array.from(
 -        document.querySelectorAll('article h2, article h3, article h4, article h5, article h6')
-+        document.querySelectorAll('article h1, article h2, article h3, article h4, article h5, article h6')
++        document.querySelectorAll('article h1, article h2, article h3, article h4')
        )
        this.tocLinks = Array.from(this.querySelectorAll('a[href^="#"]')).map((link) => ({
          element: link as HTMLAnchorElement,
@@ -37,7 +37,7 @@ index 0090994..bb59b4b 100644
        href={`#${slug}`}>{text}</a
      >
 diff --git a/node_modules/astro-pure/plugins/toc.ts b/node_modules/astro-pure/plugins/toc.ts
-index 2609983..3e78836 100644
+index 2609983..0e493dd 100644
 --- a/node_modules/astro-pure/plugins/toc.ts
 +++ b/node_modules/astro-pure/plugins/toc.ts
 @@ -14,19 +14,24 @@ function diveChildren(item: TocItem, depth: number): TocItem[] {
@@ -47,7 +47,7 @@ index 2609983..3e78836 100644
 -  // this ignores/filters out h1 element(s)
 -  const bodyHeadings = [...headings.filter(({ depth }) => depth > 1)]
 +  // include all headings including h1 element(s)
-+  const bodyHeadings = [...headings.filter(({ depth }) => depth > 0)]
++  const bodyHeadings = [...headings.filter(({ depth }) => depth > 0 && depth < 5)]
    const toc: TocItem[] = []
  
 +  // Find the minimum depth to use as top level
