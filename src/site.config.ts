@@ -7,7 +7,7 @@ export const theme: ThemeUserConfig = {
   /** Will be used in index page & copyright declaration */
   author: '儒牧',
   /** Description metadata for your website. Can be used in page metadata. */
-  description: '日常记录一些技术相关的东西。',
+  description: '记录学习与生活，分享技术与思考。',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
   favicon: '/favicon/favicon.ico',
   /** Specify the default language for this site. */
@@ -49,7 +49,7 @@ export const theme: ThemeUserConfig = {
     menu: [
       { title: '博客', link: '/blog' },
       { title: '项目', link: '/projects' },
-      { title: '链接', link: '/links' },
+      { title: '友链', link: '/links' },
       { title: '关于', link: '/about' }
     ]
   },
@@ -116,8 +116,8 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: 'https://astro-pure.js.org/' },
-      { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
+      { name: 'Link', val: 'https://rumunius.top/' },
+      { name: 'Avatar', val: 'https://rumunius.top/favicon/favicon.ico' }
     ]
   },
   // Enable page search function

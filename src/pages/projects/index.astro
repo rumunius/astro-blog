@@ -11,155 +11,171 @@ import KeyIcon from '@/assets/icons/key.svg'
 import wechat from '@/assets/wechat-qrcode.jpg'
 
 const headings = [
-  { depth: 2, slug: 'theme', text: 'Theme' },
-  { depth: 2, slug: 'programs', text: 'Programs' },
-  { depth: 2, slug: 'learnings', text: 'Learnings' },
-  { depth: 2, slug: 'others', text: 'Others' },
-  { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
-  { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
+  { depth: 1, slug: 'hardware', text: '硬件/DIY' },
+  { depth: 1, slug: 'software', text: '软件' },
+  { depth: 1, slug: 'learnings', text: '学习' },
+  { depth: 1, slug: 'others', text: '其他' },
+  { depth: 1, slug: 'gpg-signature', text: 'GPG 签名' },
+  { depth: 1, slug: 'sponsorship', text: '赞助' }
 ]
 ---
 
-<PageLayout title='Projects' {headings} view>
-  <p>Github Activities:</p>
+<PageLayout title='项目' {headings} view>
+  <p>我的Github 活动</p>
   <p>
     <Image
-      src='https://ghchart.rshah.org/659eb9/cworld1'
+      src='https://ghchart.rshah.org/659eb9/rumunius'
       alt='github activities'
       inferSize
       loading='lazy'
     />
   </p>
   <p>
-    If you think it would be useful or interesting to collaborate on a project, you can donate to
-    support my work or contact me to discuss a project.
+    如果你认为我的工作很有用或有趣，您可以捐赠以支持我的工作，或联系我讨论项目。
   </p>
-  <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
+  <Button title='赞赏我的工作' class='w-fit' href='#sponsorship'>
     <Icon class='size-5' name='receive-money' slot='before' />
   </Button>
 
-  <h2 id='theme'>Theme</h2>
+  <h1 id='hardware'>硬件/DIY</h1>
   <ProjectSection
     projects={[
       {
-        name: '🍭 Astro-theme-pure',
-        description: 'A simple, clean but powerful blog theme build by astro.',
-        links: [
-          { type: 'github', href: 'https://github.com/cworld1/astro-theme-pure' },
-          { type: 'site', href: 'https://github.com/cworld1/astro-theme-pure' },
-          {
-            type: 'doc',
-            href: 'https://github.com/cworld1/astro-theme-pure/blob/main/src/content/blog/customize/index.md'
-          }
-        ]
-      }
-    ]}
-  />
-
-  <h2 id='programs'>Programs</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: '📒 Notie',
+        name: '占位符1',
         description:
-          'Android note App complies with Material You specifications, developed using Java',
+          'XXX',
         links: [
-          { type: 'github', href: 'https://github.com/cworld1/notie' },
+          { type: 'github', href: 'about:blank' },
           {
             type: 'release',
-            href: 'https://github.com/cworld1/notie/releases'
+            href: 'about:blank'
           }
-        ]
-      },
-      {
-        name: '💄 PKU Art',
-        description: 'A script to beautify pku course website',
-        links: [
-          { type: 'github', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'site', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'doc', href: 'https://docs.arthals.ink/docs/pku-art' }
         ]
       }
     ]}
   />
-  <Collapse title='Some old projects'>
+  <Collapse title='一些以前的项目'>
     <ProjectSection
       projects={[
-        {
-          name: 'Search Switcher',
-          description: 'Add links to each other in search engines',
-          links: [{ type: 'github', href: 'https://github.com/cworld1/search-switcher' }]
-        },
-        {
-          name: 'Pure Baidu',
-          description: 'Baidu search page beautification module',
-          links: [
-            { type: 'doc', href: 'https://cworld0.com/blog/pure-baidu' },
-            { type: 'site', href: 'https://userstyles.org/styles/173673/pure' }
-          ]
-        }
-      ]}
+      {
+        name: '占位符2',
+        description:
+          'XXX',
+        links: [
+          { type: 'github', href: 'about:blank' },
+          {
+            type: 'release',
+            href: 'about:blank'
+          }
+        ]
+      }
+    ]}
     />
   </Collapse>
 
-  <h2 id='learnings'>Learnings</h2>
+  <h1 id='software'>软件</h1>
+  <ProjectSection
+    projects={[
+      {
+        name: '占位符1',
+        description:
+          'XXX',
+        links: [
+          { type: 'github', href: 'about:blank' },
+          {
+            type: 'release',
+            href: 'about:blank'
+          }
+        ]
+      }
+    ]}
+  />
+  <Collapse title='一些以前的项目'>
+    <ProjectSection
+      projects={[
+      {
+        name: '占位符2',
+        description:
+          'XXX',
+        links: [
+          { type: 'github', href: 'about:blank' },
+          {
+            type: 'release',
+            href: 'about:blank'
+          }
+        ]
+      }
+    ]}
+    />
+  </Collapse>
+
+  <h1 id='learnings'>学习</h1>
   <ProjectSection
     class='my-2'
     projects={[
       {
-        name: 'Rust Learning',
-        description: 'Some notes and code about CWorld learning Rust',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/rust-learning' }]
+        name: '占位符',
+        description:
+          'XXX',
+        links: [
+          { type: 'github', href: 'about:blank' },
+          {
+            type: 'release',
+            href: 'about:blank'
+          }
+        ]
       },
       {
-        name: 'CS 213 Learning',
-        description: 'Notes, code and experiences for Introduction to Computer Systems course',
+        name: '占位符',
+        description:
+          'XXX',
         links: [
+          { type: 'github', href: 'about:blank' },
           {
-            type: 'github',
-            href: 'https://github.com/zhuozhiyongde/Introduction-To-Computer-System-2023Fall-PKU'
+            type: 'release',
+            href: 'about:blank'
+          }
+        ]
+      },
+    ]}
+  />
+
+  <h1 id='others'>其他</h1>
+  <ProjectSection
+    projects={[
+      {
+        name: '占位符',
+        description:
+          'XXX',
+        links: [
+          { type: 'github', href: 'about:blank' },
+          {
+            type: 'release',
+            href: 'about:blank'
           }
         ]
       }
     ]}
   />
 
-  <h2 id='others'>Others</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: 'CWorld',
-        description: "CWorld's Github",
-        links: [{ type: 'github', href: 'https://github.com/cworld1' }]
-      },
-      {
-        name: 'Arthals',
-        description: 'Arthals Github',
-        links: [{ type: 'github', href: 'https://github.com/zhuozhiyongde' }]
-      }
-    ]}
-  />
-
-  <!-- gpg signature -->
-  <h2 id='gpg-signature'>GPG Signature</h2>
+  <h1 id='gpg-signature'>GPG 签名</h1>
   <p>
-    You can verify the authenticity of the files I signed by checking the GPG signature. My GPG key
-    is <code>114514</code>, and you can find it on the opengpg key servers or download from it.
+    暂无
   </p>
-  <Button href='https://keys.openpgp.org/search?q=114514' title='Checkout my key' target='_blank'>
+  <!-- <Button href='https://keys.openpgp.org/search?q=114514' title='Checkout my key' target='_blank'>
     <KeyIcon class='size-5' slot='before' />
-  </Button>
+  </Button> -->
 
   <!-- sponsorship -->
-  <h2 id='sponsorship'>Sponsorship</h2>
-  <p>Please leave a message or contact me proactively after sponsorship.</p>
+  <h1 id='sponsorship'>赞赏</h1>
+  <p>感谢您的赞赏，您的支持是我最大的动力。</p>
   <Sponsorship
     methods={[
       { name: 'WeChat', icon: 'wechat-pay', image: wechat },
       { name: 'Alipay', icon: 'alipay', image: alipay }
     ]}
   />
-  <p>Thanks to the following sponsors:</p>
+  <!-- <p>感谢以下赞赏者：</p>
   <Sponsors
     sponsors={[
       { name: 'C*a（酷安@暴走の蜗牛）', amount: '2.00', date: '2019-07-02' },
@@ -167,7 +183,7 @@ const headings = [
       { name: '◌(QQ：1934****45)', amount: '3.00', date: '2019-12-30' },
       { name: 'Anonymous', amount: '20.00', date: '2022-04-06' }
     ]}
-  />
+  /> -->
 </PageLayout>
 
 <style>
