@@ -1,3 +1,16 @@
+diff --git a/node_modules/astro-pure/components/basic/Header.astro b/node_modules/astro-pure/components/basic/Header.astro
+index afa2d01..a029cc7 100644
+--- a/node_modules/astro-pure/components/basic/Header.astro
++++ b/node_modules/astro-pure/components/basic/Header.astro
+@@ -98,7 +98,7 @@ import { Icon } from '../user'
+         // document.dispatchEvent(toggleDarkModeEvent)
+         const newTheme = setTheme(undefined, true)
+         darkModeBtn.dataset.theme = newTheme
+-        showToast({ message: `Set theme to ${newTheme}` })
++        showToast({ message: `已将主题设置为 ${newTheme}` })
+       })
+ 
+       // Menu
 diff --git a/node_modules/astro-pure/components/pages/TOC.astro b/node_modules/astro-pure/components/pages/TOC.astro
 index 421842d..3ed8b27 100644
 --- a/node_modules/astro-pure/components/pages/TOC.astro
@@ -36,6 +49,23 @@ index 0090994..bb59b4b 100644
        )}
        href={`#${slug}`}>{text}</a
      >
+diff --git a/node_modules/astro-pure/components/user/Card.astro b/node_modules/astro-pure/components/user/Card.astro
+index 3b30aee..233a2e2 100644
+--- a/node_modules/astro-pure/components/user/Card.astro
++++ b/node_modules/astro-pure/components/user/Card.astro
+@@ -23,9 +23,9 @@ const { as: Tag = 'div', class: className, href, heading, subheading, date } = A
+ >
+   <div class='flex flex-col gap-y-1.5'>
+     <div class='flex flex-col gap-y-0.5'>
+-      <h2 class='text-lg font-medium'>{heading}</h2>
+-      <p class='text-muted-foreground'>{subheading}</p>
+-      <p class='text-muted-foreground'>{date}</p>
++      <h2 class='text-lg font-medium z-10'>{heading}</h2>
++      <p class='text-muted-foreground z-10'>{subheading}</p>
++      <p class='text-muted-foreground z-10'>{date}</p>
+     </div>
+     <slot />
+   </div>
 diff --git a/node_modules/astro-pure/plugins/toc.ts b/node_modules/astro-pure/plugins/toc.ts
 index 2609983..0e493dd 100644
 --- a/node_modules/astro-pure/plugins/toc.ts

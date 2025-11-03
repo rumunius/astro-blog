@@ -9,7 +9,7 @@ tags:
   - 爬虫
 ---
 
-## 起因
+### 起因
 
 近日，一个朋友给了我一张神奇的二维码：
 ![Alt](https://i-blog.csdnimg.cn/blog_migrate/689939b63097e4210c823d0a8efdf770.png#pic_center)
@@ -25,7 +25,7 @@ tags:
 
 > **`https://tts.baidu.com/text2audio`使用URL的参数来进行文本转语音，返回mp3文件。**
 
-## 经过
+### 经过
 
 再经过一段时间的摸索，我基本找到了参数的规律：
 
@@ -63,7 +63,7 @@ tags:
 
 <font color=#dddddd>~~希望有大神可以找出剩下参数的作用或是更多的音色码/语言码~~</font>
 
-## 代码
+### 代码
 
 于是，我使用Python的**requests库**写了一个方便调用百度TTS语音功能的程序：
 ```python

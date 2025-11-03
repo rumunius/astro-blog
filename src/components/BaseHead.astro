@@ -3,6 +3,7 @@ import { prod } from 'astro-pure/server'
 import type { SiteMeta } from 'astro-pure/types'
 import config from '@/site-config'
 import Analytics from '@vercel/analytics/astro';
+import  SpeedInsights  from "@vercel/speed-insights/astro";
 type Props = SiteMeta
 
 const { articleDate, description, ogImage, title } = Astro.props
@@ -86,13 +87,16 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 {/* Styles */}
 <link rel='stylesheet' href='/styles/global.css' />
 <Analytics />
+<SpeedInsights/>
 {
   /* User script*/
   prod && (
     <script>
-      console.log( '%c Astro Theme Pure %c https://github.com/cworld1/astro-theme-pure/',
+      console.log( '%c 儒牧的博客采用的主题：Astro Theme Pure %c https://github.com/cworld1/astro-theme-pure/',
       'color:#fff;background:linear-gradient(90deg,#448bff,#44e9ff);padding:5px 0;',
-      'color:#000;background:linear-gradient(90deg,#44e9ff,#ffffff);padding:5px 10px 5px 0px;' )
+      'color:#000;background:linear-gradient(90deg,#44e9ff,#ffffff);padding:5px 10px 5px 0px;' );
+      console.log("小秘密被你发现啦~");
+      
     </script>
   )
 }
