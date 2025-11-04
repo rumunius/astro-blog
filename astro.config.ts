@@ -3,6 +3,7 @@ import vercel from '@astrojs/vercel'
 import AstroPureIntegration from 'astro-pure'
 import { defineConfig } from 'astro/config'
 import rehypeKatex from 'rehype-katex'
+import { remarkAlert } from 'remark-github-blockquote-alert'
 import remarkMath from 'remark-math'
 
 // Others
@@ -72,9 +73,9 @@ export default defineConfig({
   },
   // Markdown Options
   markdown: {
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkMath, remarkAlert],
     rehypePlugins: [
-      [rehypeKatex, {}],
+      [rehypeKatex, { strict: false }],
       rehypeHeadingIds,
       [
         rehypeAutolinkHeadings,
