@@ -23,10 +23,12 @@ import {
 } from './src/plugins/shiki-transformers.ts'
 import config from './src/site.config.ts'
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   // Top-Level Options
-  site: 'https://astro-pure.js.org',
+  site: 'https://rumunius.top',
   // Deploy to a sub path; See https://astro-pure.js.org/docs/setup/deployment#platform-with-base-path
   // base: '/astro-pure/',
   trailingSlash: 'never',
@@ -50,19 +52,16 @@ export default defineConfig({
     }
   },
 
-  integrations: [
-    // astro-pure will automatically add sitemap, mdx & unocss
-    // sitemap(),
-    // mdx(),
-    AstroPureIntegration(config)
-    // (await import('@playform/compress')).default({
-    //   SVG: false,
-    //   Exclude: ['index.*.js']
-    // }),
-
-    // Temporary fix vercel adapter
-    // static build method is not needed
-  ],
+  integrations: [// astro-pure will automatically add sitemap, mdx & unocss
+  // sitemap(),
+  // mdx(),
+  // (await import('@playform/compress')).default({
+  //   SVG: false,
+  //   Exclude: ['index.*.js']
+  // }),
+  // Temporary fix vercel adapter
+  // static build method is not needed
+  AstroPureIntegration(config), sitemap()],
   // root: './my-project-directory',
 
   // Prefetch Options
