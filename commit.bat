@@ -5,3 +5,4 @@ git add .
 git commit -m "%message%"
 echo Commit completed.
 pause
+exit
