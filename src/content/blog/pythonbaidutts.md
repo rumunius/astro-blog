@@ -1,6 +1,6 @@
 ---
 title: 使用Python和百度对外共享的TTS接口实现文本转语音
-description: '时效性文章'
+description: '时效性文章，但似乎还能用？'
 publishDate: 2020-07-08 22:09
 tags:
   - 技术
