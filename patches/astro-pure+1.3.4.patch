@@ -11,6 +11,19 @@ index afa2d01..a029cc7 100644
        })
  
        // Menu
+diff --git a/node_modules/astro-pure/components/pages/BackToTop.astro b/node_modules/astro-pure/components/pages/BackToTop.astro
+index 492983d..bbe9384 100644
+--- a/node_modules/astro-pure/components/pages/BackToTop.astro
++++ b/node_modules/astro-pure/components/pages/BackToTop.astro
+@@ -65,7 +65,7 @@ const { header: headerName, content: contentName, needPercent = true } = Astro.p
+       scrollPercentEl.innerText = scrollPercent.toString()
+ 
+       // If percent is 100, percent won't need to show
+-      actionBtns.classList.toggle('ended', scrollPercent > 100)
++      actionBtns.classList.toggle('ended', scrollPercent > 100 || scrollPercent < 0)
+     })
+   } else {
+     actionBtns.classList.add('ended')
 diff --git a/node_modules/astro-pure/components/pages/TOC.astro b/node_modules/astro-pure/components/pages/TOC.astro
 index 421842d..3ed8b27 100644
 --- a/node_modules/astro-pure/components/pages/TOC.astro
