@@ -101,3 +101,27 @@ index 2609983..0e493dd 100644
          throw new Error(`Orphan heading found: ${heading.text}.`)
        }
  
+diff --git a/node_modules/astro-pure/utils/theme.ts b/node_modules/astro-pure/utils/theme.ts
+index 3f8dda3..03572fd 100644
+--- a/node_modules/astro-pure/utils/theme.ts
++++ b/node_modules/astro-pure/utils/theme.ts
+@@ -34,7 +34,17 @@ export function setTheme(theme?: string, save = false) {
+   document.documentElement.classList.toggle('dark', targetTheme === 'dark')
+   document
+     .querySelector('meta[name="theme-color"]')
+-    ?.setAttribute('content', targetTheme === 'dark' ? '#0B0B10' : '#FCFCFD')
+-
++      ?.setAttribute('content', targetTheme === 'dark' ? '#0B0B10' : '#FCFCFD')
++  //giscus theme change
++    function sendMessage(message: Object) {
++    const iframe = document.querySelector(
++      "iframe.giscus-frame"
++    ) as HTMLIFrameElement;
++    if (!iframe || !iframe.contentWindow) return;
++    iframe.contentWindow.postMessage({ giscus: message }, "https://giscus.app");
++  }
++    sendMessage({
++      setConfig: { theme: targetTheme == "light" ? "light" : "dark_dimmed" },
++    });
+   return theme
+ }
