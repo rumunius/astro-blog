@@ -6,6 +6,7 @@ tags:
   - 技术
   - 前端
   - 软件
+heroImage: { src: './file-20250709235250836.jpg'}
 ---
 
 f12`console`运行：

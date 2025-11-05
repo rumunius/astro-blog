@@ -6,6 +6,7 @@ tags:
   - 技术
   - Windows
   - 软件
+heroImage: { src: './file-20250713190927837.jpg'}
 ---
 
 # 效果
