@@ -1,5 +1,5 @@
 diff --git a/node_modules/astro-pure/components/basic/Header.astro b/node_modules/astro-pure/components/basic/Header.astro
-index afa2d01..a029cc7 100644
+index afa2d01..b8fedb6 100644
 --- a/node_modules/astro-pure/components/basic/Header.astro
 +++ b/node_modules/astro-pure/components/basic/Header.astro
 @@ -98,7 +98,7 @@ import { Icon } from '../user'
@@ -7,7 +7,7 @@ index afa2d01..a029cc7 100644
          const newTheme = setTheme(undefined, true)
          darkModeBtn.dataset.theme = newTheme
 -        showToast({ message: `Set theme to ${newTheme}` })
-+        showToast({ message: `已将主题设置为 ${newTheme}` })
++        showToast({ message: `已将主题设置为 ${({light:"明亮",dark:"黑暗",system:"跟随系统"})[newTheme]}` })
        })
  
        // Menu
