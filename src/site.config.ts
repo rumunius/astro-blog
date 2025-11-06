@@ -117,7 +117,7 @@ export const integ: IntegrationUserConfig = {
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
       { name: 'Link', val: 'https://rumunius.top/' },
-      { name: 'Avatar', val: 'https://rumunius.top/favicon/favicon.ico' }
+      { name: 'Avatar', val: 'https://rumunius.top/images/avatar.jpg' }
     ]
   },
   // Enable page search function
