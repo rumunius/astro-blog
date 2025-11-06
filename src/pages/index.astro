@@ -61,11 +61,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
     <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='关于'>
-        <Button title='了解更多' class='w-fit self-end' href='/about' variant='ahead' />
         <p class='text-muted-foreground'></p>
         <p class='text-muted-foreground'>
           你好，我是儒牧，一名热爱技术的极客，你也可以叫我Rumunius或者Rumu。我喜欢探索各种前沿技术和工具，致力于提升自己的编程技能和项目经验。
         </p>
+        <Button title='了解更多' class='w-fit self-end' href='/about' variant='ahead' />
       </Section>
       {
         allPostsByDate.length > 0 && (
