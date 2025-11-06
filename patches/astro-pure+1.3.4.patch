@@ -1,3 +1,42 @@
+diff --git a/node_modules/astro-pure/components/basic/Footer.astro b/node_modules/astro-pure/components/basic/Footer.astro
+index 71edee1..09a6814 100644
+--- a/node_modules/astro-pure/components/basic/Footer.astro
++++ b/node_modules/astro-pure/components/basic/Footer.astro
+@@ -30,7 +30,7 @@ const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
+                   <a href={link} target='_blank' class={style}>
+                     {title}
+                   </a>
+-                  {index < footerLink1.length - 1 && ' • '}
++                  {index < footerLink1.length - 1 && ' | '}
+                 </span>
+               ))}
+             </div>
+@@ -43,7 +43,7 @@ const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
+           {
+             footerConf.links && footerConf.links.length > 0 && (
+               <>
+-                &
++                |
+                 <span>
+                   {footerConf.links
+                     .filter(({ pos }) => pos === 2)
+@@ -62,14 +62,14 @@ const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
+         {
+           footerConf.credits && (
+             <span>
++                由
+               <a href='https://github.com/withastro/astro' target='_blank'>
+                 Astro
+               </a>
+-              &
+               <a href='https://github.com/cworld1/astro-theme-pure' target='_blank'>
+                 Pure
+               </a>
+-              theme powered
++              主题驱动
+             </span>
+           )
+         }
 diff --git a/node_modules/astro-pure/components/basic/Header.astro b/node_modules/astro-pure/components/basic/Header.astro
 index afa2d01..b8fedb6 100644
 --- a/node_modules/astro-pure/components/basic/Header.astro
@@ -24,6 +63,53 @@ index 492983d..bbe9384 100644
      })
    } else {
      actionBtns.classList.add('ended')
+diff --git a/node_modules/astro-pure/components/pages/Copyright.astro b/node_modules/astro-pure/components/pages/Copyright.astro
+index 5125ae6..bafbff9 100644
+--- a/node_modules/astro-pure/components/pages/Copyright.astro
++++ b/node_modules/astro-pure/components/pages/Copyright.astro
+@@ -48,13 +48,13 @@ const shares = {
+   {/* common info */}
+   <div class='flex flex-row flex-wrap justify-start gap-x-5 gap-y-1 sm:gap-x-8'>
+     <div class='flex gap-x-2 sm:flex-col'>
+-      <span>Author</span>
++      <span>作者</span>
+       <span class='text-sm text-foreground max-sm:place-self-center'>{config.author}</span>
+     </div>
+     {
+       publishDate && (
+         <div class='flex gap-x-2 sm:min-w-16 sm:flex-col'>
+-          <span>Published at</span>
++          <span>发布日期</span>
+           <span class='text-sm text-foreground max-sm:place-self-center'>
+             {getFormattedDate(publishDate, {
+               month: 'long'
+@@ -64,7 +64,7 @@ const shares = {
+       )
+     }
+     <div class='flex gap-x-2 sm:flex-col'>
+-      <span>Copyright</span>
++      <span>版权</span>
+       <a
+         class='text-sm text-foreground max-sm:place-self-center'
+         href='https://creativecommons.org/licenses/by/4.0/'
+@@ -115,7 +115,7 @@ const shares = {
+     class='flex items-center justify-between text-muted-foreground no-underline'
+     target='_blank'
+   >
+-    <span>Buy me a cup of coffee ☕.</span>
++    <span>为我买杯咖啡吧~☕</span>
+     <Icon class='box-content size-5 p-1' name='receive-money' />
+   </a>
+ </div>
+@@ -136,7 +136,7 @@ const shares = {
+   copyLink?.addEventListener('click', () => {
+     navigator.clipboard.writeText(window.location.href)
+     // Show toast
+-    showToast({ message: 'Link copied!' })
++    showToast({ message: '已复制链接！' })
+   })
+ 
+   // QRCode
 diff --git a/node_modules/astro-pure/components/pages/TOC.astro b/node_modules/astro-pure/components/pages/TOC.astro
 index 421842d..3ed8b27 100644
 --- a/node_modules/astro-pure/components/pages/TOC.astro
