@@ -3,7 +3,7 @@ import vercel from '@astrojs/vercel'
 import AstroPureIntegration from 'astro-pure'
 import { defineConfig } from 'astro/config'
 import rehypeKatex from 'rehype-katex'
-import { remarkAlert } from 'remark-github-blockquote-alert'
+import rehypeCallouts from 'rehype-callouts'
 import remarkMath from 'remark-math'
 
 // Others
@@ -14,12 +14,12 @@ import remarkMath from 'remark-math'
 import rehypeAutolinkHeadings from './src/plugins/rehype-auto-link-headings.ts'
 // Shiki
 import {
-  addCopyButton,
-  addLanguage,
-  addTitle,
-  transformerNotationDiff,
-  transformerNotationHighlight,
-  updateStyle
+    addCopyButton,
+    addLanguage,
+    addTitle,
+    transformerNotationDiff,
+    transformerNotationHighlight,
+    updateStyle
 } from './src/plugins/shiki-transformers.ts'
 import config from './src/site.config.ts'
 
@@ -27,89 +27,90 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // Top-Level Options
-  site: 'https://rumunius.top',
-  // Deploy to a sub path; See https://astro-pure.js.org/docs/setup/deployment#platform-with-base-path
-  // base: '/astro-pure/',
-  trailingSlash: 'never',
+    // Top-Level Options
+    site: 'https://rumunius.top',
+    // Deploy to a sub path; See https://astro-pure.js.org/docs/setup/deployment#platform-with-base-path
+    // base: '/astro-pure/',
+    trailingSlash: 'never',
 
-  // Adapter
-  // https://docs.astro.build/en/guides/deploy/
-  // 1. Vercel (serverless)
-  adapter: vercel(),
-  output: 'server',
-  // 2. Vercel (static)
-  // adapter: vercelStatic(),
-  // 3. Local (standalone)
-  // adapter: node({ mode: 'standalone' }),
-  // output: 'server',
-  // ---
+    // Adapter
+    // https://docs.astro.build/en/guides/deploy/
+    // 1. Vercel (serverless)
+    adapter: vercel(),
+    output: 'server',
+    // 2. Vercel (static)
+    // adapter: vercelStatic(),
+    // 3. Local (standalone)
+    // adapter: node({ mode: 'standalone' }),
+    // output: 'server',
+    // ---
 
-  image: {
-    responsiveStyles: true,
-    service: {
-      entrypoint: 'astro/assets/services/sharp'
-    }
-  },
-
-  integrations: [// astro-pure will automatically add sitemap, mdx & unocss
-  // sitemap(),
-  // mdx(),
-  // (await import('@playform/compress')).default({
-  //   SVG: false,
-  //   Exclude: ['index.*.js']
-  // }),
-  // Temporary fix vercel adapter
-  // static build method is not needed
-  AstroPureIntegration(config), sitemap()],
-  // root: './my-project-directory',
-
-  // Prefetch Options
-  prefetch: true,
-  // Server Options
-  server: {
-    host: true
-  },
-  // Markdown Options
-  markdown: {
-    remarkPlugins: [remarkMath, remarkAlert],
-    rehypePlugins: [
-      [rehypeKatex, { strict: false }],
-      rehypeHeadingIds,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: 'append',
-          properties: { className: ['anchor'] },
-          content: { type: 'text', value: '#' }
+    image: {
+        responsiveStyles: true,
+        service: {
+            entrypoint: 'astro/assets/services/sharp'
         }
-      ]
-    ],
-    // https://docs.astro.build/en/guides/syntax-highlighting/
-    shikiConfig: {
-      themes: {
-        light: 'github-light',
-        dark: 'github-dark'
-      },
-      transformers: [
-        transformerNotationDiff(),
-        transformerNotationHighlight(),
-        updateStyle(),
-        addTitle(),
-        addLanguage(),
-        addCopyButton(2000)
-      ]
+    },
+
+    integrations: [// astro-pure will automatically add sitemap, mdx & unocss
+        // sitemap(),
+        // mdx(),
+        // (await import('@playform/compress')).default({
+        //   SVG: false,
+        //   Exclude: ['index.*.js']
+        // }),
+        // Temporary fix vercel adapter
+        // static build method is not needed
+        AstroPureIntegration(config), sitemap()],
+    // root: './my-project-directory',
+
+    // Prefetch Options
+    prefetch: true,
+    // Server Options
+    server: {
+        host: true
+    },
+    // Markdown Options
+    markdown: {
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [
+            [rehypeKatex, { strict: false }],
+            rehypeHeadingIds,
+            rehypeCallouts,
+            [
+                rehypeAutolinkHeadings,
+                {
+                    behavior: 'append',
+                    properties: { className: ['anchor'] },
+                    content: { type: 'text', value: '#' }
+                }
+            ]
+        ],
+        // https://docs.astro.build/en/guides/syntax-highlighting/
+        shikiConfig: {
+            themes: {
+                light: 'github-light',
+                dark: 'github-dark'
+            },
+            transformers: [
+                transformerNotationDiff(),
+                transformerNotationHighlight(),
+                updateStyle(),
+                addTitle(),
+                addLanguage(),
+                addCopyButton(2000)
+            ]
+        }
+    },
+    experimental: {
+        contentIntellisense: true
+    },
+    vite: {
+        plugins: [
+            //   visualizer({
+            //     emitFile: true,
+            //     filename: 'stats.html'
+            //   })
+        ]
     }
-  },
-  experimental: {
-    contentIntellisense: true
-  },
-  vite: {
-    plugins: [
-      //   visualizer({
-      //     emitFile: true,
-      //     filename: 'stats.html'
-      //   })
-    ]
-  }
 })

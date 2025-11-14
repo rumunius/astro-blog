@@ -20,5 +20,5 @@ $$
 $$
 > Ciallo
 
-> [!NOTE] 
+> [!summary] 
 >笔记！

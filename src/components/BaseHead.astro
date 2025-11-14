@@ -5,7 +5,7 @@ import config from '@/site-config'
 import Analytics from '@vercel/analytics/astro';
 import  SpeedInsights  from "@vercel/speed-insights/astro";
 type Props = SiteMeta
-
+import 'rehype-callouts/theme/obsidian'
 const { articleDate, description, ogImage, title } = Astro.props
 
 const siteTitle = `${title} ${config.titleDelimiter} ${config.title}`
