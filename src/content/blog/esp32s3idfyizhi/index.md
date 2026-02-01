@@ -85,14 +85,16 @@ if __name__ == "__main__":
 
 ```
 
-然后利用PCtoLCD2002完美版，设置如下参数：
+然后利用[PCtoLCD2002完美版](https://wwaml.lanzoul.com/il60O3hizuyd)（密码:byo9），设置如下参数：
 
 ![](file-20260201173354255.png)
 
 然后输入适合的字体和字体尺寸。
 
-> 对于8x8，我使用[“观致”字体](https://github.com/Angelic47/FontChinese7x7)（下载其中的`guanzhi.ttf`）
+> 对于8x8，我使用[“观致”字体](https://github.com/Angelic47/FontChinese7x7)（下载其中的`guanzhi.ttf`，或通过我的[云盘](https://wwaml.lanzoul.com/it3Mh3hizv6b)，密码:78qb）
+> 
 > 对于24x24，我选择系统自带的黑体（中易黑体）
+> 
 > 对于12x12以及16x16，我选择系统自带的宋体
 
 之后点击这个按钮，选择“生成国标汉字库”：
