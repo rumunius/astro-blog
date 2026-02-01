@@ -124,6 +124,12 @@ fonts,    data, 0x40,    ,        0x110000,
 
 子类型`0x40`无所谓，你也可以取`0x41`等等。
 
+先烧录分区表，在ESP-IDF Terminal中用如下的命令：
+
+```
+idf.py -p COM9 partition_table-flash
+```
+
 之后在ESP-IDF Terminal中用如下的命令单独烧写字库。
 
 ```
