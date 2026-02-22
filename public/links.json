@@ -11,6 +11,12 @@
                     "avatar": "https://cdn.arthals.ink/Arthals.png"
                 },
                 {
+                    "name": "Elanor's Garden",
+                    "intro": "Hello world!",
+                    "link": "https://elanor-qc.github.io",
+                    "avatar": "https://elanor-qc.github.io/source/img/favorite.jpg"
+                },
+                {
                     "name": "CWorld Site",
                     "intro": "求知若愚，虚怀若谷",
                     "link": "https://cworld0.com/",
@@ -28,13 +34,12 @@
                     "link": "https://xtkx.site/",
                     "avatar": "https://img.xtkx.site/2025/10/cropped-LOGO_%E9%80%8F%E6%98%8E.png"
                 },
-		{
+                {
                     "name": "阿言的博客",
                     "intro": "记录一个纯白硬件人的摸爬滚打",
                     "link": "https://knowledgeisinfinite.xtkx.site/",
                     "avatar": "http://knowledgeisinfinite.xtkx.site/wp-content/uploads/sites/6/2025/11/cropped-IMG_20250701_101205.jpg"
- 
-		}
+                }
             ]
         },
         {
